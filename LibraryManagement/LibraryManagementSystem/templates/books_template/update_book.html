@@ -1,0 +1,40 @@
+{% extends 'navbar/navbar.html' %}
+
+{% block content %}
+
+{% load static %}
+<link href="{% static 'css/updt_issue.css' %}" rel="stylesheet">
+<div id="div1" style="background-image:url('{% static "images/books.jpg" %}'); background-repeat: no-repeat;background-size: 100%;">
+
+    <h2 align="center">Update books</h2>
+    <form method="post">
+        {% csrf_token %}
+            <table align="center" width="500px">
+                <tr>
+                    <td>BookName:</td>
+                    <td><input type="text" name="txtBookName" value="{{ books.book_name }}"></td>
+                </tr>
+                <tr>
+                    <td>AuthorName:</td>
+                    <td><input type="text" name="txtAuthorName" value="{{ books.author_name }}"></td>
+                </tr>
+                <tr>
+                    <td>CourseName:</td>
+                    <td>
+                        <select name="ddlCourseName">
+                            <option selected>{{ books.course_name }}</option>
+                            {% for i in course %}
+                                <option>{{ i.course_name }}</option>
+                            {% endfor %}
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="center" colspan="2"><input type="submit" name="BtnSub" value="Update Book"></td>
+                </tr>
+            </table>
+
+    </form>
+</div>
+
+{% endblock  %}

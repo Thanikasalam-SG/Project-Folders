@@ -1,0 +1,49 @@
+{% extends 'navbar/navbar.html' %}
+
+{% block content %}
+
+{% load static %}
+
+<link href="{% static 'css/add_books.css' %}" rel="stylesheet">
+<div id="div1" style="background-image:url('{% static 'images/books.jpg' %}'); background-repeat: no-repeat;
+background-size:100%; width:100%;
+height: 670px;">">
+    <div id="div2">
+        <h2 align="center" style="color:purple">Add books</h2>
+        {% if res %}
+        <script>
+            alert('{{ msg }}')
+        </script>
+        {% endif %}
+        <form action='addbook' method="post">
+            {% csrf_token %}
+                <table align="center" width="500px">
+                    <tr>
+                        <td style="color:white">BookName:</td>
+                        <td><input type="text" name="txtBookName"></td>
+                    </tr>
+                    <tr>
+                        <td style="color:white">AuthorName:</td>
+                        <td><input type="text" name="txtAuthorName"></td>
+                    </tr>
+                    <tr>
+                        <td style="color:white">CourseName:</td>
+                        <td>
+                            <select name="ddlCourseName">                        
+                                <option>--select course--</option>
+                                {% for i in course %}
+                                    <option>{{ i.course_name }}</option>
+                                {% endfor %}
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="center" colspan="2"><input type="submit" name="BtnSub" value="AddBook"></td>
+                    </tr>
+                </table>
+
+        </form>
+    </div>    
+</div>
+
+{% endblock  %}

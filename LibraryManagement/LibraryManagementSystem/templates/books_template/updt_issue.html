@@ -1,0 +1,67 @@
+{% extends 'navbar/navbar.html' %}
+{% block content %}
+
+{% load static %}
+
+<link href="{% static 'css/updt_issue.css' %}" rel="stylesheet">
+<div id="div1" style="background-image:url('{% static "images/books.jpg" %}'); background-repeat: no-repeat;background-size: 100%;">
+<h2 align="center"> Update the Issued book </h2>
+<form method='post'>
+    {% csrf_token %}
+    <table align="center">
+        <tr>
+            <td>
+                Student Name:
+            </td>
+            <td>                
+                <input type="text" name="txtName" value={{Issue.stud_name}}>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Student Semster:
+            </td>
+            <td>
+                <input type="number" name="txtSem" max="8" min="1" value={{Stud.stud_semester}}>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Book Name:
+            </td>
+            <td>
+                <select name="ddlBookName">
+                    <option selected>{{Issue.book_name}}</option>
+                    {% for i in Book %}
+                        <option>{{ i.book_name }}</option>
+                    {% endfor %}
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Start Date:
+            </td>
+            <td>
+                <input type="date" name="txtStartDate">
+                <input type="text" value="{{ Issue.start_date }}" disabled>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                End Date:
+            </td>
+            <td>
+                <input type="date" name="txtEndDate" value={{Issue.end_date}}>
+                <input type="text" value="{{Issue.end_date}}" disabled>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" align="left">
+                <input type="submit" name="btnSub" value="Update">
+            </td>
+        </tr>
+    </table>
+</form>
+</div>
+{% endblock  %}

@@ -1,0 +1,16 @@
+/* Reset some default styles */
+body, h2, h3, table, td, input {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+/* Apply a full height background image */
+body {
+    background-color: #282c34; /* Fallback background color */
+    background-image: url('../images/books.jpg');
+    background-size:cover;
+    background-position: center;
+    color: white; /* White text color for contrast */
+    font-family: Arial, sans-serif; /* Basic font for readability */
+}

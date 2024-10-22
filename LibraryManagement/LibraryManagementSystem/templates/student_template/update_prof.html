@@ -1,0 +1,59 @@
+{% extends 'navbar/stud_navbar.html' %}
+
+{% block content %}
+{% load static %}
+<head>
+    <style>
+        body{
+        color:white;
+        align:center;
+        }
+    </style>
+<link href="{% static '/css/update_prof.css' %}" rel="stylesheet">
+</head>
+<div id="div2" style="background-image:url('{% static "images/books.jpg" %}');
+                      background-repeat: no-repeat;
+                      background-size: 100%;
+                      height:660px">
+
+<form method="post">
+    {% csrf_token %}
+    <div id="div1" style="margin-left:30%;">
+        <h3 align="center" style="color:pink">Update the Profile settings</h3>
+        <table align="center" width="50%" style="height:30%">
+        <tr>
+            <td>Student Name:</td>
+            <td><input type="text" name="txtName" value="{{ data.stud_name }}"></td>
+        </tr>
+        <tr>
+            <td>Student Phno:</td>
+            <td><input type="number" name="txtPhno" pattern="([+][9][1][1])?[6-9]{1}/d{9}" value="{{ data.stud_phno }}"></td>
+        </tr>
+        <tr>
+            <td>Student Course:</td>
+            <td>
+                <input type="text" name="txtCourse" value="{{ data.stud_course }}" disabled>
+            </td>
+        </tr>
+        <tr>
+            <td>Student Semster</td>
+            <td>
+                <input type="number" name='txtSem' min="1" max="8"  value="{{ data.stud_semester }}">
+            </td>
+        </tr>
+        <tr>
+            <td>Student Password</td>
+            <td>
+                <input type="password" name='txtPswd' value="{{ data.stud_password }}">
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" align="center">
+                <input type="submit" name="btnSub" value="UpdateProfile">
+            </td>
+        </tr>
+</table>
+    </div>
+</form>
+{% endblock %}
+

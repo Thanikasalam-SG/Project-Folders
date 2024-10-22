@@ -1,0 +1,92 @@
+{% extends 'navbar/navbar.html' %}
+
+{% block content %}
+
+{% load static %}
+
+<link href="{% static 'css/add_book.css' %}" rel="stylesheet">
+<div id="div1" style="background-image:url('{% static "images/books.jpg" %}'); background-repeat: no-repeat;
+background-size: 100%;">
+
+<div id="div3" style="float:left;margin-left:10%">
+    <h2 align="right" style="padding-top:100px;color:purple">Get Student Info</h2>
+    {% if res %}
+    <script>alert('{{ msg }}')</script>
+    {% endif %}
+    <form action='getstudent' method='post'>
+        {% csrf_token %}
+        <table align="left" style="margin-left:20%;height:10px">
+            <tr>
+                <td style="font-size:20px">
+                Student Phno:
+                </td>
+                <td>
+                    <input type="number" name="txtPhno"  style="width:80%">
+                </td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td colspan="2" align="center">
+                    <input type="submit" name="btnSub" value="getdata" style="width:50%">
+                </td>
+            </tr>
+            
+        </table>
+    </form>
+</div>
+
+
+<div id="div4" style="float:right;margin-right:10%">
+    <h2 align="right" style="padding-top:100px;color:purple">Assign Books To Students</h2>
+    <form action='assignbook' method='post'>
+        {% csrf_token %}
+    
+        <table align="right" style="height:30px;margin-right:15%">
+            <tr>
+                <td>
+                    Student Name:
+                </td>
+                <td>                
+                    <input type="text" value="{{Stud.stud_name}}" name="txtName"  style="width:100%">
+                </td>
+            </tr>        
+            <tr>
+                <td>
+                    Book Name:
+                </td>
+                <td>
+                    <select name="ddlBookName" style="width:100%">
+                        <option>--select---</option>
+                        {% for i in Book %}
+                            <option>{{ i.book_name }}</option>
+                        {% endfor %}
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Start Date:
+                </td>
+                <td>
+                    <input type="date" name="txtStartDate"  style="width:100%">
+                </td>
+            </tr>
+            <tr>
+                <td style="padding-top:5px;">
+                    End Date:
+                </td>
+                <td>
+                    <input type="date" name="txtEndDate" style="width:100%">
+                </td>
+            </tr>
+            <tr class="cls">
+                <td colspan="2" align="center">
+                    <input type="submit" name="btnSub" value="Assign Book">
+                </td>
+            </tr>
+        </table>
+    </form>
+</div>
+</div>
+{% endblock  %}

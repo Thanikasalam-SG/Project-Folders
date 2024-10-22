@@ -1,0 +1,46 @@
+{% extends 'navbar/navbar.html' %}
+
+{% block content %}
+
+{% load static %}
+<link href="{% static 'css/display.css' %}" rel="stylesheet">
+<style>
+    th{
+        color:rgb(240, 216, 7);
+        font-size: 30px;
+    }
+    td{
+        font-size: 20px;
+        color:white;
+    }
+</style>
+
+<div id="container" style="background-image:url('{% static 'images/books.jpg' %}'); background-repeat: no-repeat;
+background-size: 100%; width:100%;
+height: 670px;">">
+
+<h2 align="center" style="padding-top:10px;color:purple">Book Details</h2>
+
+<table class="table" style="border: 5px solid rgb(243, 181, 9);height:100px;color:white" width="500px">
+    <tr>
+        <th>Book_name</th>
+        <th>Author_name</th>
+        <th>Course_name</th>
+        <th>Update</th>
+        <th>Delete</th>
+    </tr>
+    {% for i in books %}
+        <tr>
+            <td>{{ i.book_name }}</td>
+            <td>{{ i.author_name }}</td>
+            <td>{{ i.course_name }}</td>
+            <td><a href="{% url 'up' i.id %}"><img src="{% static '/images/update.jpg' %}" width="40px" height="40px"></a></td>
+            <td><a href="{% url 'del' i.id %}"><img src="{% static '/images/delete.jpg' %}" width="40px" height="40px"></a></td>
+
+        </tr>
+    {% endfor %}
+
+</table>
+</div>
+
+{% endblock  %}

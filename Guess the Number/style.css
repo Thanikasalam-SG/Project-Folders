@@ -1,0 +1,59 @@
+.div1{
+    width: 50%;
+    height: 400px;
+    margin-left: 30%;
+    margin-top: 10%;   
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url("https://media.istockphoto.com/vectors/abstract-numbers-background-vector-id474819873?k=6&m=474819873&s=170667a&w=0&h=i7wU9iGr1VfWEc70meDxbRelzjd_YGfAzFBoO-jA8Qo=");    
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center; 
+    color:rgb(3, 41, 79);
+    border-radius: 30px;
+    border: 15px solid  rgb(235, 235, 7);
+}
+#btn{
+    width: 10%;
+}
+body{
+    background: rgb(8,149,241);
+    background: linear-gradient(90deg, rgba(8,149,241,1) 42%, rgba(90,255,0,0.7142506660867471) 100%, rgba(209,23,92,1) 100%);
+   
+}
+.div1 button{
+    border-radius: 15px;
+    width: 2rem;
+    height: 2rem;
+    font-size: larger;
+    color: #d2691e;
+    box-shadow: -3px -3px #d2691e;
+    font-weight: bolder;
+}
+.div1 input{
+    width: 15rem;
+    height: 2rem;
+    font-size: larger;
+    border-radius: 10px;
+    padding-left: 15px;
+    box-shadow: -5px -5px #8800ff;
+    color: #8800ff;
+    font-weight: bolder;
+}
+.div1 input:hover{
+    cursor:auto;
+}
+.div1 button:hover{
+    cursor: pointer;
+    transition: all is ease-in-out;
+}
+.div1 h1{
+    color:rgb(3, 41, 79);
+    padding-top: 100px;
+    text-shadow: -3px -3px 3px rgb(205, 48, 241);
+    font-size: 40px;
+}
+.div1 p{
+    color:rgb(3, 41, 79);
+    font-size: x-large;
+    font-weight: bolder;
+}

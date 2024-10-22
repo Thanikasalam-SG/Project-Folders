@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookify</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="navbar">
+        <h1>Bookify</h1>
+    </div>
+    
+
+    <div class="container">
+        <div class="book-container">
+            <h2>The Great Gatsby</h2>
+            <h5>F. Scott Fitzgerald</h5>
+            <p>The Great Gatsby by F. Scott Fitzgerald is a novel set in the 1920s, exploring themes of wealth, love, and the American Dream. The story revolves around Jay Gatsby, a mysterious millionaire, and his obsessive love for Daisy Buchanan, a woman from his past. Through the eyes of narrator Nick Carraway, the novel reveals the emptiness and corruption behind Gatsby's glamorous lifestyle. The novel critiques the materialism and moral decay of the era. Ultimately, Gatsby's tragic pursuit of his idealized dream leads to his downfall.</p>
+            <button onclick="deletebook(event)">Delete</button>
+        </div>
+    </div>
+
+    <button class="add-button" id="add-popup-button">+</button>
+
+    <div class="popup-overlay"></div>
+    <div class="popup-box">
+        <h2>Add Book</h2>
+        <form action="">
+            <input type="text" id="book-title-input" placeholder="Book Title">
+            <input type="text" id="book-author-input" placeholder="Book Author">
+            <textarea id="book-description-input" placeholder="Short Description"></textarea>
+            <button id="add-book">Add</button>
+            <button id="cancel-popup">Cancel</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

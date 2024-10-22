@@ -1,0 +1,60 @@
+{% load static %}
+
+<html lang="en">
+<head>
+
+    <style>
+        body{
+            font-size: 40px;
+            padding-top:5%;
+        }
+        td,th{
+            font-size: 30px;
+        }
+        input,select{
+            width:100%;
+            height: 80%;
+            font-size: 20px;
+        }
+        input[type=submit]{
+            color:White;
+            background-color: #393E46;
+            width:30%;
+            height: 70%;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="{% static 'css/register.css' %}" rel="stylesheet">
+</head>
+<body>
+    <h2 align="center">Register Page</h2>
+    <form action="register" method="post">
+        {% csrf_token %}
+        <h3 style="color: red;">{{ data }}</h3>
+        <div id="div1">
+        <table align="center">
+            <tr>
+                <td>UserName:</td>
+                <td><input type="text" name="txtUserName"></td>
+            </tr>
+            <tr>
+                <td>Password:</td>
+                <td><input type="password" name="txtPswd"></td>
+            </tr>
+            <tr>
+                <td>Email:</td>
+                <td><input type="email" name="txtEmail"></td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center">
+                    <input type="submit" name="btnSub" value="Register">
+                </td>
+            </tr>
+        </table>
+    </div>
+    </form>
+</body>
+</html>
