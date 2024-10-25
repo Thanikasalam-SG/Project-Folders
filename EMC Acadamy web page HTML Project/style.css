@@ -1,0 +1,28 @@
+*{
+    font-family: Poppins;
+}
+body{
+    background-color: rgb(1, 37, 65);
+    color: #fff;
+}
+.box1 h1,h3,p{
+    text-align: center;
+}
+.box2{
+    position: relative;
+    left: 35%;
+}
+table{
+    border-collapse: collapse;
+}
+table th,td{
+    padding: 10px;
+}
+.box3 a{
+    text-decoration: none;
+    color: rgb(141, 21, 21);
+}
+.box3 a:hover{
+    color: #fff;
+    border-bottom: 2px solid #fff;
+}

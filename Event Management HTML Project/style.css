@@ -1,0 +1,22 @@
+*{
+    background-color: #000;
+    color: #fff;
+    font-family: arial;
+}
+.box1{
+    text-align: center;
+}
+.box3{
+    text-align: center;
+}
+.box4{
+    text-align: center;
+}
+.box3 h1 a{
+    text-decoration: none;
+    color: #ba6060;
+}
+.box3 h1 a:hover{
+    color: #deb887;
+    border-bottom: 2px solid #fff;
+}

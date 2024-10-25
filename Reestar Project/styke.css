@@ -1,0 +1,72 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.header{
+    background-color: black;
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+}
+ul,li{
+    display: inline;
+}
+li{
+    padding-right: 5px;
+    padding-top:20px;
+    cursor: pointer;
+    color: #808080;
+}
+li:hover{
+    color: #ffffff;
+}
+.products{
+    text-align: center;
+}
+.box{ 
+   margin-top: 50px;
+   display: inline-block;
+   border-color: #000000;
+   border-width: 2px;
+   border-style: solid;
+   width: 250px;
+   padding-bottom: 10px;
+}
+img{
+    width: 250px;
+    height: 380px;
+}
+.para{
+    cursor: pointer;
+    background-color: #000000;
+    color: #808080;
+    display: inline;
+    padding: 10px;
+    margin-top: 10px;
+}
+.para:hover{
+    color: #ffffff;
+}
+.contact{
+    text-align: center;
+    background-color: #000000;
+    color: #ffffff;
+    margin-top: 20px;
+}
+td, tr,table{
+    text-align: center;
+    margin-left: 40%;
+}
+input[type=button]{
+    width:300px;
+    margin-top: 20px;
+    padding: 5px;
+    background-color: rgb(117, 244, 189);
+    color:  #0000ff  ;
+    cursor: pointer;
+    font-size: large;
+    font-weight: bold;
+}
+input:hover{
+    color: rgb(255, 255, 255); 
+}
