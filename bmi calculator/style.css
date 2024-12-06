@@ -1,0 +1,316 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body, p, td, th, div, span, input, li, textarea{
+    font-family: arial, helvetica, sans-serif;
+    font-size: 16px;
+    color: #000;
+}
+nav{
+    width: 100%;
+    min-height: 70px;
+    background-color: rgb(14, 53, 106);
+    display: flex;
+}
+.nav-img img{
+    width: 200px;
+    height: 40px;
+    cursor: pointer;
+}
+.nav-img{
+    width: 20%;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 15%;
+}
+.nav-content{
+    width: 60%;
+    height: 70px;
+    display: flex;
+    list-style: none;
+    align-items: end;
+    justify-content: center;
+    gap: 10px;
+    font-size: 18px;
+    font-family: sans-serif;
+    color: #fff;
+   
+}
+.nav-content li{
+    padding: 10px;
+}
+.nav-content li:hover{
+    cursor: pointer;
+    background-color: rgb(5, 170, 115);
+}
+
+@media (max-width:850px){
+    .nav-content{
+        display: none;
+    }
+}
+.con-list{
+    display: flex;
+    list-style: none;
+    margin-top: 10px;
+}
+.con-list li{
+    padding-left: 5px;
+}
+.a{
+    text-decoration: none;
+    color: rgb(14, 53, 106);
+    font-size: 0.9em;
+    font-family: arial;
+}
+h1{
+    color: hsl(215, 77%, 24%);
+    font-family: arial;
+    font-size: 1.8em;
+}
+main{
+    margin-left: 15%;
+}
+.head{
+    width: 63%;
+    height: 20px;
+    background-color:  hsl(215, 77%, 30%);
+    color: #fff;
+    gap: 20px;
+    font-family: arial;
+    display: flex;
+    padding: 25px 60px;
+    align-items: center;
+    justify-content: center;
+}
+.container h1{
+    margin: 10px;
+}
+.box{
+    margin-top: 17px;
+}
+.table{
+    background-color: rgb(225, 222, 222);
+    display: inline-block;
+    box-shadow: 2px 2px 2px ;
+}
+.age{
+    width: 7em;
+    height: 30px;
+    border: 1px solid;        
+}
+td{
+    padding: 8px;
+}
+#female{
+    margin-left: 20px
+}
+.input{
+    font-size: 1em;
+    padding: 5px;
+}
+.input::placeholder{
+    text-align: end;
+}
+button{
+    padding: 10px;
+    font-size: 1em;
+    border: none;
+    color: #fff;
+}
+.btn1{
+    background-color: rgb(11, 161, 11);
+    margin-right: 5px;
+    cursor: pointer;
+}
+.btn1:hover{
+    background-color: rgb(43, 41, 41, 0.758);
+}
+.btn1 i{
+    background-color: rgb(252, 252, 252);
+    color: rgb(182, 226, 182);
+    margin-left: 5px;
+    width: 1em;
+}
+.btn2{
+    background-color: rgb(173, 173, 173);
+    cursor: pointer;
+}
+.btn2:hover{
+    background-color: rgba(43, 41, 41, 0.758);
+}
+.box-items{
+    margin-bottom: 3px;
+    font-size: 1.4em;
+    margin-top: 2px;
+}
+
+.box-items a.active{
+    background-color: rgb(225, 222, 222);
+}
+.box-items #a1:hover{
+    background-color: rgb(225, 222, 222);
+    color: rgb(14, 53, 106);
+}
+.box-items #a3:hover{
+    background-color: rgb(225, 222, 222);
+    color: rgb(14, 53, 106);
+}
+.box-items a:not(.active){
+    background-color:hsl(215, 77%, 30%);
+    color: #fff;
+    padding: 10px;
+
+}
+.nav-content li a,.para{
+    color: #fff;
+    text-decoration: none;
+}
+#a2{
+    border-left: 3px solid #fff;
+    border-right: 3px solid #fff;
+    padding: 10px;
+}
+.div{
+    display: flex;
+}
+.result{
+    width: 31.5%;
+    height: 20vh;
+    margin-left: 2em;
+    margin-top: 0.7em;
+}
+.result h2.res{
+    padding: 0.5em;
+    background-color: hsla(102, 94%, 26%, 0.978);
+    color: #fff;
+    width: 100%;
+    font-size: 1.5em;
+}
+.result h2.Bmi{
+    font-size: 1.5em;
+}
+.span{
+    display: flex;
+    align-items: center;
+    margin-top: .5em;
+}
+.span h3{
+    margin-left: 1em;
+}
+.content-items{
+    margin-right: 44%;
+    margin-top: 50px;
+    text-align: left;
+}
+.table1{
+    margin: auto;
+    border-collapse: collapse; 
+    min-width: 40%; 
+    text-align: start;
+    border-color: hsl(0, 0%, 80%);
+}
+.table1 th,td{
+    padding: 3px;
+}
+.table1 tr:nth-child(odd){
+    background-color: hsl(0, 0%, 90%);
+}
+.table1 .theadL{
+    background-color: hsl(203, 65%, 37%);
+    color: #fff;
+    border-left: 1px solid hsl(203, 65%, 37%);
+    border-top: 1px solid hsl(203, 65%, 37%);
+    border-bottom: 1px solid hsl(203, 65%, 37%);
+}
+.table1 .theadR{
+    background-color: hsl(203, 65%, 37%);
+    color: #fff;
+    border-Right: 1px solid hsl(203, 65%, 37%);
+    border-top: 1px solid hsl(203, 65%, 37%);
+    border-bottom: 1px solid hsl(203, 65%, 37%);
+}
+.table1 .theadM{
+    background-color: hsl(203, 65%, 37%);
+    color: #fff;
+    border-top: 1px solid hsl(203, 65%, 37%);
+    border-bottom: 1px solid hsl(203, 65%, 37%);
+}
+.bmi-img{
+    align-items: center;
+    justify-self: center;
+    display: flex;
+   
+}
+.table1 tr td:nth-child(2){
+    text-align: center;
+}
+.table1 tr td:nth-child(3){
+    text-align: center;
+}
+.chart{
+    color: rgb(10, 113, 192);
+}
+.chart:hover{
+    text-decoration: none;
+}
+.u-list{
+   margin-left: 5%;
+}
+tr{
+    display: table-row;
+    border-color: inherit;
+    vertical-align: inherit;
+    unicode-bidi: isolate;
+}
+#table{
+    border-collapse: separate;
+    text-indent: initial;
+}
+hr{
+    border: 1px solid;
+}
+.formula-table{
+    margin: auto;
+}
+footer{
+    height: 50px;
+    background-color: hsl(0, 0%, 85%);
+}
+footer, footer ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+footer ul li{
+    list-style: none;
+}
+footer ul li a, p a{
+    margin-right: 5px;
+    color: hsl(0, 0%, 30%);
+}
+footer ul li a:hover, p a:hover{
+    text-decoration: none;
+}
+
+@media (max-width:950px){
+    main,.content-items{
+        margin-left: auto;
+        margin: 10px;
+    }
+}
+.bigtext {
+    font-size: 18px;
+}
+.spn{
+    margin-left: -3px;
+}
+.content-items p{
+    line-height: 1.3;
+}
